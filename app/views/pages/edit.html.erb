@@ -1,0 +1,11 @@
+<%= link_to("<< Back to List", {:action => 'index'}, :class => 'back_link') %>
+
+<div class="pages new">
+<h2>Update Page</h2>
+
+<%= form_for(:page, :url => {:action => 'update', :id => @page.id}) do |f| %>
+
+
+<% end %>
+
+</div>
