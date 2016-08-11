@@ -5,3 +5,9 @@
 <%= link_to('Actual Link', 'http://ih0.redbubble.net/image.32727522.8507/flat,1000x1000,075,f.u2.jpg') %>
 <br />
 <%= link_to('Hello with parameters!', {:action => 'hello', :page => 5, :id => 20}) %>
+<br />
+<% name = "Chris" %>
+<% name = "You messed up now.'); alert('Ya just got hacked, son." %>
+<%= link_to('Roar', '#', :onclick => "jsRoar('#{j(name)}'); return true;") %>
+
+<%= javascript_tag("jsRoar('#{j(name)}');") %>
