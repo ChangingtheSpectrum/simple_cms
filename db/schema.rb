@@ -11,16 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160728131638) do
+ActiveRecord::Schema.define(version: 20160823131220) do
 
   create_table "admin_users", force: :cascade do |t|
-    t.string   "first_name", limit: 25
-    t.string   "last_name",  limit: 50
-    t.string   "email",      limit: 100, default: "", null: false
-    t.string   "username",   limit: 25
-    t.string   "password",   limit: 40
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
+    t.string   "first_name",      limit: 25
+    t.string   "last_name",       limit: 50
+    t.string   "email",           limit: 100, default: "", null: false
+    t.string   "username",        limit: 25
+    t.string   "password",        limit: 40
+    t.datetime "created_at",                               null: false
+    t.datetime "updated_at",                               null: false
+    t.string   "password_digest", limit: 255
   end
 
   create_table "admin_users_pages", id: false, force: :cascade do |t|
@@ -52,8 +53,7 @@ ActiveRecord::Schema.define(version: 20160728131638) do
     t.integer  "page_id",      limit: 4
     t.string   "name",         limit: 255
     t.integer  "position",     limit: 4
-    t.string   "permalink"     
-    t.boolean  "visible",      default: false
+    t.boolean  "visible",                    default: false
     t.string   "content_type", limit: 255
     t.text     "content",      limit: 65535
     t.datetime "created_at",                                 null: false
